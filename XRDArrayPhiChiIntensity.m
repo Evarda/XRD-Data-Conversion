@@ -1,7 +1,7 @@
 % Author: Michelle King
 % MATLAB version: 2019b
 
-% This script converts an .XRDML file from XRD data 
+% This script converts an .txt file of XRD data 
 % given as a table of intensities to
 % a .CSV file as an array of Chi, Phi, and Intensity
 
@@ -37,4 +37,4 @@ for ii = 1:size(phi)
     end
 end
 
-csvwrite('XRDML_formatted.csv', format_data)
+csvwrite('XRD_formatted.csv', format_data)

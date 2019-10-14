@@ -1,7 +1,7 @@
 % Author: Michelle King
 % MATLAB version: 2019b
 
-% This script converts an .XRDML file from XRD data 
+% This script converts a txt file of XRD data 
 % to a 3D Polar Plot
 
 %% Close All Figures/Clear All Variables
