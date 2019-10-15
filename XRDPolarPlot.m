@@ -18,7 +18,7 @@ chi(1:size(data,2)-1) = 0;
 intensity(1:size(data,1)-1,1:size(data,2)-1) = 0;
 
 %% Populate Arrays
-phi = data(2:size(data,1), 1);
+phi = data(2:size(data,1), 1); % in degree
 chi = data(1, 2:size(data,2));
 intensity = data(2:size(data,1), 2:size(data,2));
 
@@ -32,14 +32,14 @@ zlabel('Intensity (unit)')
 
 %% Plot Data (3D Surface Plot and Contour Plot)
 % Convert Data
-x = chi.*cos(phi);
-y = chi.*sin(phi);
+x = chi.*cos(phi*pi/180);
+y = chi.*sin(phi*pi/180);
 z = intensity;
 
 % 3D Surface Plot
 figure(2)
-polarplot = surf(x, y, z)
-polarplot.EdgeColor = 'none';
+polarplot = contour3(x, y, z)
+%polarplot.EdgeColor = 'none';
 xlabel('\chi cos(\phi) (unit)')
 ylabel('\chi sin(\phi) (unit)')
 zlabel('Intensity (unit)')
